@@ -4,20 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lesson extends Model
+class Cart extends Model
 {
 
-    protected $fillable = [
-        'title',
-        'video_path',
+    protected $fillable=[
+        'user_id',
         'course_id'
     ];
+
     public function course()
     {
         return $this->belongsTo(Course::class);
-    }
-    public function reviews()
-    {
-        return $this->hasMany(LessonReview::class);
     }
 }

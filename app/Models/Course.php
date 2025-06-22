@@ -20,4 +20,8 @@ class Course  extends Model
     {
         return $this->hasMany(Lesson::class);
     }
+    public function quizzes()
+    {
+        return $this->hasMany(Quiz::class);
+    }
 }
